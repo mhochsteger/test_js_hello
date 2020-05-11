@@ -23,7 +23,7 @@ function(widgets /*, dependencies variables */)
 	//
 
         let HelloView = widgets.DOMWidgetView.extend({
-          defaults: _.extend({}, widgets.DOMWidgetView.prototype.defaults(), {value: ""}),
+          defaults: _.extend({}, widgets.DOMWidgetModel.prototype.defaults(), {value: ""}),
           render: function() {
             this.el.nodeValue = this.value
             this.model.on('change:value', this.data_changed, this);
