@@ -22,6 +22,21 @@ function(widgets /*, dependencies variables */)
 	// module code
 	//
 
+        let HelloView = widgets.DOMWidgetView.extend({
+          defaults: _.extend({}, widgets.DOMWidgetView.prototype.defaults(), {value: ""}),
+          render: function() {
+            this.el.nodeValue = this.value
+            this.model.on('change:value', this.data_changed, this);
+            this.data_changed();
+
+          },
+          data_changed: function() {
+            console.log("HelloView data changed");
+            this.el.innerHTML = this.model.get("value");
+          },
+        });
+
+        test_js_hello.HelloView = HelloView;
 	// exports for AMD (requirejs)
 	return test_js_hello;
 });
