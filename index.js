@@ -7,21 +7,21 @@ if (typeof define !== 'function' || ! define.amd)
 	};
 
 
-define('test-js-hello' /* or 'app/test-js-hello' - see comment above */,
+define('test_js_hello' /* or 'app/test_js_hello' - see comment above */,
 	['@jupyter-widgets/base' /* , more required dependencies */ ],
 function(widgets /*, dependencies variables */)
 {
         console.log("widgets", widgets);
-	var test-js-hello = {};
+	var test_js_hello = {};
 
 	// exports for Node
 	if (typeof module !== 'undefined' && module.exports)
-		module.exports = test-js-hello;
+		module.exports = test_js_hello;
 
 	//
 	// module code
 	//
 
 	// exports for AMD (requirejs)
-	return test-js-hello;
+	return test_js_hello;
 });

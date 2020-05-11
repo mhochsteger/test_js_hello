@@ -1,6 +1,6 @@
 {
   "name": "test_js_hello",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Test ipywidgets",
   "main": "index.js",
   "scripts": {
